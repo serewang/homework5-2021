@@ -15,6 +15,7 @@ h1{
   line-height: 1;
   padding: 50px 0;
   text-align: center;
+  color: white; /* changed something here*/
 }
 
 h2{
@@ -60,9 +61,13 @@ nav a{
   color: black;
   font-weight: bold;
   /* Requirement 1 code here*/
+  text-decoration: none;
 }
 
   /* Requirement 2 code here*/
+nav a:hover {
+  text-decoration: underline;
+}
 
 
 
@@ -75,53 +80,107 @@ nav a{
   z-index: 1;
 
   /* Requirement 3a code here*/
-  
+  margin-top: 40px;
+  visibility: hidden;
 }
 
 /* Requirement 3b code here*/
 
 
 /* Requirement 4 code here*/
-
+*:focus {
+  border: 2px solid black;
+  visibility: visible;
+}
 
 
 .container{
   /* Requirement 5 code here*/
-
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: auto;
+  grid-row-gap: 15px;
 }
 
 /* Remainder of requirements here: */
 
 header{
+  background-image: url("../images/header.jpg"); 
+  background-repeat: no-repeat;
   background-attachment: fixed; /* Parallax effect */
   background-position: center; /* Parallax effect */
   background-size: cover; /* Parallax effect */
-  color: white;
+  background-color: white;
   height: 400px; /* Parallax effect */
 
   /* YOUR CODE HERE; */
+  
+  display: grid;
+  grid-column: 1/-1;
+  grid-row: 1 / span 1;
 }
 
 
 
 .about-image{
-  
+  display: grid;
+  grid-column: 1/-1;
+  max-height: 700px;
+  grid-row: 2 / 3;
+  overflow: hidden;
 }
 
 .about{
+  display: grid;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
  
 }
 
 .method-image{
- 
+  display: grid;
+  grid-column: 1/-1;
+  max-height: 700px;
+  grid-row: 3 / 4;
+  overflow: hidden;
 }
 
 .method{
+  display: grid;
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
   
 }
 
 /* You need to write some of your own selectors here */
 
+.clients {
+  display: grid;
+  grid-column:  2 / 3;
+  grid-row: 4 / 5;
+}
+
+.contact {
+  display: grid;
+  grid-column:  2 / 3;
+  grid-row: 5 / 6;
+}
+
+.clients-image {
+  display: grid;
+  grid-column: 1/-1;
+  max-height: 700px;
+  grid-row: 4 / 5;
+  overflow: hidden;
+}
+
+.contact-image {
+  display: grid;
+  grid-column: 1/-1;
+  max-height: 700px;
+  grid-row: 5 / 6;
+  overflow: hidden;
+}
 
 
 .text-block{
@@ -130,7 +189,7 @@ header{
   padding: 30px;
 
   /* Your code here */
-
+  margin: auto;
 }
 
 @media screen and (min-width: 800px){
@@ -138,44 +197,55 @@ header{
     padding: 30px 0;
 
     /* Your code here */
+    text-align: right;
   }
 
   .container{
-   
+    display: grid;
+    grid-template-columns: 50px, auto, 500px, auto, 50px;
+    grid-template-rows: repeat(5,400px);
   }
 
   
 
   .about-image{
-  
+    display: grid;
+    grid-column: 2 / 4;
   }
 
   .about{
-    
+    display: grid;
+    grid-column: 3 / 5;
   }
 
   .method-image{
-    
+    display: grid;
+    grid-column: 3 / 5;
   }
 
   .method{
-   
+    display: grid;
+    grid-column: 2 / 4;
   }
 
   .clients-image{
-    
+    display: grid;
+    grid-column: 2 / 4;
   }
 
   .clients{
-    
+    display: grid;
+    grid-column: 3 / 5;
   }
 
   .contact-image{
-    
+    display: grid;
+    grid-column: 3 / 5;
   }
 
   .contact{
-    
+    display: grid;
+    grid-column: 2 / 4;
   }
 
 }
