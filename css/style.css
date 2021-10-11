@@ -116,6 +116,7 @@ header{
   background-position: center; /* Parallax effect */
   background-size: cover; /* Parallax effect */
   background-color: white;
+  color: white;
   height: 400px; /* Parallax effect */
 
   /* YOUR CODE HERE; */
@@ -194,7 +195,7 @@ header{
   padding: 30px;
 
   /* Your code here */
-  margin: auto;
+  align-self: center;
 }
 
 @media screen and (min-width: 800px){
@@ -251,6 +252,10 @@ header{
   .contact{
     display: grid;
     grid-column: 2 / 4;
+  }
+
+  .text-block {
+    /* text-align: left; */
   }
 
 }
